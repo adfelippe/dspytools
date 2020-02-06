@@ -145,11 +145,11 @@ def find_phase_shift(x, y, f):
 
 
 """
-    @brief  Find phase shift between two signals
+    @brief  Apply a Butterworth filter to an input signal
 
-    This method estimates the phase shift (lag) between two input signals
-    at the same frequency. It uses cross-correlation to find a time shift
-    and then calculate phase bewteen Y over X.
+    This method applies a n-th order Butterworth filter to a given
+    input signal. Cut-off and sampling frequencies have to be input
+    as well. Order is optional, default is 5, which is a high value.
 
     @param  data            array_like
                              Signal to be filtered.
