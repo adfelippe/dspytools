@@ -5,12 +5,9 @@ such as filters and functions to find values one would normally
 do manually.
 """
 
-import matplotlib.pyplot as plt
 import numpy as np
-from scipy import fftpack
 from scipy.signal import butter, lfilter, freqz
 from scipy.signal import correlate
-
 
 """
     @brief  This functions calculates the center frequency from an FFT
