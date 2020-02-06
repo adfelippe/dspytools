@@ -1,5 +1,5 @@
 """
-This library is intended to be a simple swiss-army knife for
+This library is intended to be a simple swiss army knife for
 working with digital signal processing. It is a set of tools
 such as filters and functions to find values one would normally
 do manually.
@@ -149,13 +149,13 @@ def find_phase_shift(x, y, f):
 
     This method applies a n-th order Butterworth filter to a given
     input signal. Cut-off and sampling frequencies have to be input
-    as well. Order is optional, default is 5, which is a high value.
+    as well.  Butterworth filters have a -3 dB decay at cut-off.
+    Filter order is optional, default is 5, which is a high value.
 
     @param  data            array_like
                              Signal to be filtered.
     @param  cutoff          float
                              Cut-off frequency in Hertz.
-                             Butterworth filters have a -3 dB decay at cut-off.
     @param  fs              int
                              Signal sampling frequency in Hertz.
     @param  order           int, optional
