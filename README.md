@@ -1,6 +1,6 @@
 # dspytools
 
-This library is intended to be a simple swiss-army knife for working with digital signal processing in Python.
+This library is intended to be a simple swiss army knife for working with digital signal processing in Python.
 
 ## Dependencies
 ```
