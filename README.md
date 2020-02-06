@@ -4,7 +4,6 @@ This library is intended to be a simple swiss-army knife for working with digita
 
 ## Dependencies
 ```
-matplotlib
 numpy
 scipy
 ```
