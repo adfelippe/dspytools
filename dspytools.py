@@ -82,7 +82,7 @@ def find_center_frequency(fft, bins, interpolation=False):
 
 
 """
-    @brief  DC component filter
+    @brief  DC offset filter
 
     This method removes DC offset of a given input signal. It can be used
     either for real-time and static acquisitions. For real-time, pass the optional
