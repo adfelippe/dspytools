@@ -107,7 +107,6 @@ def dc_filter(signal, realtime=False, R=0.9):
         R = 1.0
 
     if (realtime == True):
-        print('Real-time with R = {}'.format(R))
         y = [0] * len(signal)
         # Real-time DC filter formula: y(n) = x(n) - x(n - 1) + Ry(n - 1)
         for i in range(1, len(signal)):
@@ -140,7 +139,7 @@ def find_phase_shift(x, y, f):
     xcorr_max = xcorr.argmax()
     dt = np.arange(1 - len(x), len(x))
     recovered_time_shift = dt[xcorr_max]
-    phase = 360 * f * recovered_time_shift / 1000
+    phase = 360 * f * recovered_time_shift
     return phase
 
 
