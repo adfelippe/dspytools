@@ -177,7 +177,7 @@ def butterworth_lowpass_filter(signal, cutoff, fs, order=5):
     This method generates a random noise signal based on the algorithm
     suggested in the "The Scientist and Engineer's Guide to Digital
     Signal Processing" book by Steven W. Smith. The method will return
-    the generated noise in a list of a size given by noise_size. Noise
+    the generated noise in a list of a size given by noise size. Noise
     range is the amplitude of the signal. Mean and standard deviation
     are parameters one can set to adjust noise variation over time.
 
