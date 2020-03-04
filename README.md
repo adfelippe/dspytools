@@ -14,5 +14,6 @@ scipy
 - DC filter for both real-time and static signal acquisitions.
 - Find the phase shift (lag) between two signals.
 - Configurable low-pass Butterworth filter.
+- Random noise generation.
 
 TODO: Improve this lousy README file.
