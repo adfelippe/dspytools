@@ -6,6 +6,7 @@ do manually.
 """
 
 import numpy as np
+import random
 from scipy.signal import butter, lfilter, freqz
 from scipy.signal import correlate
 
@@ -168,3 +169,44 @@ def butterworth_lowpass_filter(signal, cutoff, fs, order=5):
     b, a = butter(order, normal_cutoff, btype='low', analog=False)
     y = lfilter(b, a, signal)
     return y
+
+
+"""
+    @brief  Generate a random noise signal
+
+    This method generates a random noise signal based on the algorithm
+    suggested in the "The Scientist and Engineer's Guide to Digital
+    Signal Processing" book by Steven W. Smith. The method will return
+    the generated noise in a list of a size given by noise_size. Noise
+    range is the amplitude of the signal. Mean and standard deviation
+    are parameters one can set to adjust noise variation over time.
+
+    @param  noise_mean      float
+                             Desired noise signal mean.
+    @param  noise_std       float
+                              Desired noise signal standard deviation.
+    @param  noise_size      array_like
+                             Size of the generated nosie array.
+    @param  noise_range     int
+                             Desired range of the noise signal amplitude.
+    @return noise           array_like
+                             Generated noise signal array.
+"""
+def random_noise_generator(noise_mean, noise_std, noise_size, noise_range):
+    # Set seed to sytem clock
+    random.seed()
+    noise = []
+    # Loop to create the generated noise array
+    for i in range(0, noise_size):
+        buf = 0
+        # This loop will form each value of the array
+        # using the provided parameters
+        for j in range(0, noise_range):
+            buf = buf + (random.random() * noise_range)
+        buf = buf / noise_range
+        buf = buf - (noise_range / 2)
+        buf = buf * noise_std
+        buf = buf + noise_mean
+        noise.append(buf)
+
+    return noise
